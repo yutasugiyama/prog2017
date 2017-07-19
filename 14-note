@@ -1,0 +1,69 @@
+import turtle
+t = turtle.Turtle()
+
+t.home()
+t.clear()
+
+t.forward(100)
+t.left(90)
+t.forward(100)
+
+
+def rect(x, y, a):
+  t.up()
+  t.home()
+  t.forward(x)
+  t.left(90)
+  t.forward(y)
+  t.down()
+  for i in range(4):
+    t.forward(a)
+    t.left(-90)
+#空行
+
+t.clear()
+rect(10, 10, 100)
+rect(10, -110, 100)
+rect(-110, 10, 100)
+rect(-110, -110, 100)
+
+class Dice:
+  face_num = 6
+  def shoot(self):
+    return random.randint(1, self.face_num)
+#空行
+
+import random
+aDice = Dice()#クラスをもとにオブジェクトを作る
+aDice.shoot()#オブジェクトを使う
+
+class Dice:
+　def __init__(self, val):
+　　self.face_num = val
+　def shoot(self):
+　　return random.randint(1, self.face_num)
+#空行
+
+import random
+aDice = Dice(12)
+aDice.shoot()
+
+170 クラス名、アトリビュート、メソッド
+172 self
+
+181　CUI
+
+183　＞は書き出し、＜は読み込み
+
+import sys
+
+for line in sys.stdin:
+  print(line)
+  
+import sys
+
+sum = 0
+for line in sys.stdin:
+  sum += int(line.strip())
+
+print(sum)
